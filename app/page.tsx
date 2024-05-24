@@ -56,21 +56,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
-      <section className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative gap-5">
-        <h1 className='text-5xl text-center font-bold'>Eleazar James Galope</h1>
-        <p>Hi</p>
+      <section id="intro" className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative">
+        <h1 id="fullName" className='text-6xl text-center font-bold mx-20'>Eleazar James Galope</h1>
+        <section id="shortAboutMe" className='w-3/4 text-center text-xl mt-10 mx-10 p-7 italic'>
+          <p>An aspiring Computer Science major student with a passion for learning. I'm eager to delve into the world of technology and music, exploring new avenues for creativity and innovation.</p>
+        </section>
+        <button>
+
+        </button>
         <button
           onClick={scrollToInquiries}
-          className={`p-5 text-2xl border rounded-full absolute bottom-4 right-4 transition-opacity duration-250 ease-in-out ${
-            isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`p-5 text-2xl rounded-full absolute bottom-4 right-4 transition-all duration-250 ease-in-out ${
+            isVisible ? 'opacity-100 bg-white text-black hover:bg-blue-700 hover:text-white' : 'opacity-0 bg-blue-500 hover:bg-blue-700'
+          }`} style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}
         >
           ↓
         </button>
       </section>
       
       <section id="inquiries" className="w-full flex flex-col items-center justify-center bg-gray-900 text-gray-100 p-10">
-        <div className='border-white border-4 p-5 rounded-lg'>
+        <div className='border-white border-2 p-5 rounded-lg'>
           <h2 className='text-large text-center font-bold m-10'>Inquiries?</h2>
           <form onSubmit={handleSubmit}>
             <div className='mb-4'>
