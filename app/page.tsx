@@ -63,7 +63,7 @@ export default function Home() {
     <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-5">
       {/* Card for Microsoft Office */}
       <div className="rounded-lg p-6 shadow-md w-auto relative overflow-hidden mx-10 sm:mx-0 md:mx-0">
-  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/public/microsoftapps.png')", opacity: 0.1}}></div>
+  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/microsoftapps.png')", opacity: 0.1}}></div>
   <div className="h-full w-full flex items-center justify-center text-center px-10">
     <h3 className="text-2xl font-bold text-white">Proficient in Microsoft Office Apps</h3>
   </div>
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* Card for Programming Skills */}
       <div className="rounded-lg p-10 shadow-md w-auto relative overflow-hidden mx-10 sm:mx-0 md:mx-0">
-  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/public/proglang.jpg')", opacity: 0.1}}></div>
+  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/proglang.jpg')", opacity: 0.1}}></div>
   <div className="h-full w-full flex items-center justify-center text-center px-10">
     <h3 className="text-2xl font-bold text-white">Skilled in VB.NET, Python, Java, HTML, CSS, and JS</h3>
   </div>
@@ -79,7 +79,7 @@ export default function Home() {
 
       {/* Card for Web Development Tools */}
       <div className="rounded-lg p-6 shadow-md w-auto relative overflow-hidden mx-10 sm:mx-0 md:mx-0">
-  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/public/tn.jpg')", opacity: 0.1}}></div>
+  <div className="bg-cover bg-center w-full h-full absolute top-0 left-0" style={{backgroundImage: "url('/tn.jpg')", opacity: 0.1}}></div>
   <div className="h-full w-full flex items-center justify-center text-center px-10">
     <h3 className="text-2xl font-bold text-white">Experienced with Tailwind CSS and Next.JS</h3>
   </div>
