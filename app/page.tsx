@@ -92,6 +92,7 @@ export default function Home() {
         <div className='border-white border-2 p-32 rounded-lg px-50 min-px-50'>
           <h2 className='text-3xl text-center font-bold m-3'>May problema ka ba?</h2>
           <p className='text-large text-center italic m-3'>ra, chatmate tayo</p>
+          <p className='text-large text-center italic m-3'>hehe</p>
           <form onSubmit={handleSubmit}>
             <div className='mb-4'>
               <label className='block text-gray-300 text-sm font-bold mb-2' htmlFor='name'>
