@@ -26,8 +26,8 @@ const InquiriesSection = () => {
   };
 
   return (
-    <section id="inquiries" className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative">
-      <div className="border-white border-0 p-20 rounded-lg sm:border-2">
+    <section id="inquiries" className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative py-10">
+      <div className="border-white border-0 p-20 rounded-lg">
         <h2 className="text-3xl text-center font-bold m-3">You have inquiries?</h2>
         <p className="text-large text-center italic m-3">Just drop me a message!</p>
         <form onSubmit={handleSubmit}>
