@@ -3,17 +3,19 @@
 import React from 'react';
 import './globals.css';
 import BackgroundMusic from './components/BackgroundMusic';
-import IntroSection from './intro';
-import InquiriesSection from './inquiries';
-import ProficiencySection from './proficiency';
+import IntroSection from './mainpage/intro';
+import ProficiencySection from './mainpage/proficiency';
+import ProjectsSection from './mainpage/projects';
+import InquiriesSection from './mainpage/inquiries';
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <BackgroundMusic />
-      <IntroSection />
-      <ProficiencySection />
-      <InquiriesSection />
+      <IntroSection /> {/* bg-gray-900 text-gray-100*/}
+      <ProficiencySection /> {/* bg-gray-800 text-gray-100 */}
+      <ProjectsSection /> {/* bg-gray-900 text-gray-100*/}
+      <InquiriesSection /> {/* bg-gray-800 text-gray-100 */}
     </main>
   );
 }

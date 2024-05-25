@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { db } from './firebase';
+import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
 const InquiriesSection = () => {
@@ -26,7 +26,7 @@ const InquiriesSection = () => {
   };
 
   return (
-    <section id="inquiries" className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative">
+    <section id="inquiries" className="w-full h-screen flex flex-col items-center justify-center bg-gray-800 text-gray-100 relative">
       <div className="border-white border-0 p-20 rounded-lg sm:border-2">
         <h2 className="text-3xl text-center font-bold m-3">You have inquiries?</h2>
         <p className="text-large text-center italic m-3">Just drop me a message!</p>
