@@ -21,7 +21,7 @@ const BackgroundMusic = () => {
 
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      <audio ref={audioRef} src="/sasamahankita.ogg" loop />
+      <audio ref={audioRef} src="/sasamahankitainstrumental.ogg" loop />
       <button
         className="bg-gray-800 text-white p-2 rounded-full focus:outline-none"
         onClick={togglePlayPause}
