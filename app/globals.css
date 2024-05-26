@@ -102,3 +102,7 @@ h1, h2, h3, p, label, input, button, a {
   font-family: 'PlusJakartaSans', sans-serif;
 }
 
+#siteAbout a {
+  font-weight: bold;
+}
+

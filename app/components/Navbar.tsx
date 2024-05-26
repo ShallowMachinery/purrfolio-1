@@ -33,7 +33,12 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleLinkClick = (hash: string) => {
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    event.preventDefault();
+    const targetSection = document.querySelector(hash);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
     setActiveSection(hash.replace('#', ''));
     setIsNavbarOpen(false);
   };
@@ -52,11 +57,11 @@ const Navbar = () => {
         <img src="/logo.png" alt="Logo" className="h-8" />
       </div>
       <div className="hidden sm:flex items-center space-x-6">
-        <a href="#intro" onClick={() => handleLinkClick('#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>Intro</a>
-        <a href="#proficiency" onClick={() => handleLinkClick('#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>Proficiency</a>
-        <a href="#projects" onClick={() => handleLinkClick('#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>Projects</a>
-        <a href="#hobbies" onClick={() => handleLinkClick('#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>Hobbies</a>
-        <a href="#inquiries" onClick={() => handleLinkClick('#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>Inquiries</a>
+        <a href="#intro" onClick={(e) => handleLinkClick(e, '#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>Intro</a>
+        <a href="#proficiency" onClick={(e) => handleLinkClick(e, '#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>About me</a>
+        <a href="#projects" onClick={(e) => handleLinkClick(e, '#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>Projects</a>
+        <a href="#hobbies" onClick={(e) => handleLinkClick(e, '#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>Hobbies</a>
+        <a href="#inquiries" onClick={(e) => handleLinkClick(e, '#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>Inquiries</a>
       </div>
       <div className="flex sm:hidden">
         <button className="text-gray-300" onClick={toggleNavbar}>{isNavbarOpen ? '' : 'Menu'}</button>
@@ -65,11 +70,11 @@ const Navbar = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-100 flex justify-center items-center transition-opacity duration-300">
         <div className="flex flex-col items-center space-y-4 transition-opacity duration-300">
             <button className="absolute top-8 left-8 text-gray-300 mt-0 ml-0" onClick={closeNavbar}>✖</button>
-            <a href="#intro" onClick={() => handleLinkClick('#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>Intro</a>
-            <a href="#proficiency" onClick={() => handleLinkClick('#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>Proficiency</a>
-            <a href="#projects" onClick={() => handleLinkClick('#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>Projects</a>
-            <a href="#hobbies" onClick={() => handleLinkClick('#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>Hobbies</a>
-            <a href="#inquiries" onClick={() => handleLinkClick('#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>Inquiries</a>
+            <a href="#intro" onClick={(e) => handleLinkClick(e, '#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>Intro</a>
+            <a href="#proficiency" onClick={(e) => handleLinkClick(e, '#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>About me</a>
+            <a href="#projects" onClick={(e) => handleLinkClick(e, '#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>Projects</a>
+            <a href="#hobbies" onClick={(e) => handleLinkClick(e, '#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>Hobbies</a>
+            <a href="#inquiries" onClick={(e) => handleLinkClick(e, '#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>Inquiries</a>
           </div>
         </div>
       )}

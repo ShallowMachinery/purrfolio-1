@@ -3,24 +3,24 @@ import React, { useState } from 'react';
 interface Card {
   title: string;
   description: string;
-  imageUrl: string; // Path to your image
+  imageUrl: string;
 }
 
 const cardsData: Card[] = [
   {
-    title: 'Skilled in Various Programming Languages',
+    title: 'Skilled in various programming languages',
     description: 'Experienced with VB.NET, Python, Java, HTML, and CSS.',
-    imageUrl: '/proglang.jpg', // Replace with your image path
+    imageUrl: '/proglang.jpg',
   },
   {
-    title: 'Proficiency in MS Office Apps',
+    title: 'Proficiency in Microsoft Office Applications',
     description: 'Earned certificates from Microsoft for passing Word 2019, Excel 2019, Powerpoint 2019 and 2013, and Access 2013 Specialist Exams.',
-    imageUrl: '/microsoftapps.png', // Replace with your image path
+    imageUrl: '/microsoftapps.png',
   },
   {
-    title: 'Machine Learning',
-    description: 'Exploring concepts like deep learning and natural language processing.',
-    imageUrl: '/tn.jpg', // Replace with your image path
+    title: 'Expertise in songwriting and music production',
+    description: 'A <a href="https://open.spotify.com/artist/5MMvI5sqs62xL24Vu9OYyy" target="_blank" rel="noopener noreferrer">verified Spotify artist</a>, with years of experience in songwriting and an avid user of <a href="https://www.image-line.com/fl-studio/" target="_blank" rel="noopener noreferrer">Fruity Loops</a>.',
+    imageUrl: '/musicprod.png',
   },
 ];
 
@@ -44,7 +44,7 @@ const ProficiencySection: React.FC = () => {
         <p>I have a strong interest in both computer science and music production. Computer science fascinates me with its endless possibilities for problem-solving and innovation, while music production allows me to express my creativity and emotions. I'm motivated by the opportunity to constantly learn and grow in both fields.</p>
       </section>
 
-      {/* Card container with transition */}
+      {/* Card container */}
       <div className="flex overflow-x-hidden w-full justify-center transition duration-300 ease-in-out transform translate-x-0">
         {cardsData.map((cardData, index) => (
           <div
@@ -58,7 +58,7 @@ const ProficiencySection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-75 rounded-lg"></div>
               <div className="absolute bottom-0 left-0 p-4">
                 <h3 className="text-base sm:text-xl font-bold text-white">{cardData.title}</h3>
-                <p className="text-gray-100 sm:text-base text-xs">{cardData.description}</p>
+                <p className="text-gray-100 sm:text-base text-xs" dangerouslySetInnerHTML={{ __html: card.description }} />
               </div>
             </div>
           </div>

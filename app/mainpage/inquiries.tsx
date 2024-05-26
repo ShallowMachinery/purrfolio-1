@@ -15,13 +15,13 @@ const InquiriesSection = () => {
         email,
         message,
       });
-      console.log("Document written with ID: ", docRef.id);
       setName("");
       setEmail("");
       setMessage("");
-      alert("Data added to the database.");
+      alert("I received your message. Stay tuned for my response!");
     } catch (error) {
-      console.error("Error adding document: ", error);
+      alert("Unfortunately, an error eccured. Please try again later!")
+      console.error("Error sending message: ", error);
     }
   };
 
@@ -78,6 +78,9 @@ const InquiriesSection = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div id="siteAbout" className="absolute bottom-6 right-6 text-gray-300 mb-0 mr-0 w-48 md:w-60 text-right">
+        <p className="text-xs">Coded in <a className="transition-colors duration-300 hover:text-blue-500" href="https://code.visualstudio.com">Visual Studio Code.</a> Built with <a className="transition-colors duration-300 hover:text-blue-500" href="https://tailwindcss.com">Tailwind CSS</a> and <a className="transition-colors duration-300 hover:text-blue-500" href="https://tailwindcss.com">Next.js.</a>Text is set in <a className="transition-colors duration-300 hover:text-blue-500" href="https://www.tokotype.com">Tokotype</a>'s <a className="transition-colors duration-300 hover:text-blue-500" href="https://fonts.google.com/specimen/Plus+Jakarta+Sans">Plus Jakarta Sans</a> interface.</p>
       </div>
     </section>
   );
