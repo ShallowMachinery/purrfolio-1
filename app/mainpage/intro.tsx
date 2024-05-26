@@ -9,9 +9,26 @@ interface IntroSectionProps {
   language: string;
 }
 
+interface LanguageStrings {
+  fullName: string;
+  latinName?: string;
+  shortAboutMe: string;
+  email: string;
+  linkedin: string;
+  facebook: string;
+  xtwitter: string;
+  instagram: string;
+  spotify: string;
+  musixmatch: string;
+}
+
+interface Strings {
+  [key: string]: LanguageStrings;
+}
+
 const IntroSection: React.FC<IntroSectionProps> = ({ language }) => {
   const [tooltip, setTooltip] = useState<string | null>(null);
-  const [strings, setStrings] = useState({});
+  const [strings, setStrings] = useState<Strings>({});
   const [showLatinName, setShowLatinName] = useState(false);
 
   useEffect(() => {

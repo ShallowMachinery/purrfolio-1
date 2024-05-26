@@ -3,13 +3,20 @@ import { FaPlay, FaPause } from 'react-icons/fa'; // Import play and pause icons
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
+interface LanguageStrings {
+  [key: string]: {
+    play: string;
+    pause: string;
+  };
+}
+
 interface BackgroundMusicSectionProps {
   language: string;
 }
 
 const BackgroundMusic: React.FC<BackgroundMusicSectionProps> = ({ language }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [strings, setStrings] = useState({});
+  const [strings, setStrings] = useState<LanguageStrings>({});
   const [isPlaying, setIsPlaying] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 

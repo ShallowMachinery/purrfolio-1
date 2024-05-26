@@ -2,6 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 
+interface LanguageStrings {
+  [key: string]: {
+    inquiriestitle: string;
+    inquiriessubtitle: string;
+    titlename: string;
+    placeholdername: string;
+    titleemail: string;
+    placeholderemail: string;
+    titlemessage: string;
+    placeholdermessage: string;
+    submitbutton: string;
+    messagereceived: string;
+    messagenotsent: string;
+    credits: string;
+  };
+}
+
 interface InquiriesSectionProps {
   language: string;
 }
@@ -10,7 +27,7 @@ const InquiriesSection: React.FC<InquiriesSectionProps> = ({ language }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [strings, setStrings] = useState({});
+  const [strings, setStrings] = useState<LanguageStrings>({});
 
   useEffect(() => {
     const fetchStrings = async () => {

@@ -8,13 +8,24 @@ interface Card {
   imageUrl: string;
 }
 
+interface LanguageStrings {
+  aboutmetitle: string;
+  longAboutMe: string;
+  pprevcard: string;
+  pnextcard: string;
+}
+
+interface Strings {
+  [key: string]: LanguageStrings;
+}
+
 interface ProficiencySectionProps {
   language: string;
 }
 
 const ProficiencySection: React.FC<ProficiencySectionProps> = ({ language }) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [strings, setStrings] = useState({});
+  const [strings, setStrings] = useState<Strings>({});
   const [cardsData, setCardsData] = useState<Card[]>([]);
 
   useEffect(() => {

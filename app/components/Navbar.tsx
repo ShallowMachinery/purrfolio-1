@@ -4,6 +4,17 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
+interface LanguageStrings {
+  [key: string]: {
+    intro: string;
+    aboutme: string;
+    projects: string;
+    hobbies: string;
+    inquiries: string;
+    navbarmenu: string;
+  };
+}
+
 interface NavbarProps {
   language: string;
   toggleLanguage: () => void;
@@ -12,7 +23,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   const [activeSection, setActiveSection] = useState('');
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [strings, setStrings] = useState({});
+  const [strings, setStrings] = useState<LanguageStrings>({});
 
   useEffect(() => {
     const handleHashChange = () => {
