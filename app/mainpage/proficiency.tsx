@@ -21,17 +21,16 @@ const ProficiencySection: React.FC<ProficiencySectionProps> = ({ language }) => 
     const fetchStrings = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "language_strings"));
-        const data = {};
+        const data: { [key: string]: any } = {};
         querySnapshot.forEach((doc) => {
           data[doc.id] = doc.data();
         });
-        console.log("Data received from Firestore:", data); // Log the data received
         setStrings(data);
       } catch (error) {
         console.error("Error fetching data from Firestore:", error);
       }
     };
-
+  
     fetchStrings();
   }, []);
 
@@ -45,7 +44,6 @@ const ProficiencySection: React.FC<ProficiencySectionProps> = ({ language }) => 
           const cardData = doc.data() as Card;
           data.push(cardData);
         });
-        console.log("Data received from Firestore:", data); // Log the data received
         setCardsData(data);
       } catch (error) {
         console.error("Error fetching data from Firestore:", error);

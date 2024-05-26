@@ -47,11 +47,10 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
     const fetchStrings = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "language_strings"));
-        const data = {};
+        const data: { [key: string]: any } = {};
         querySnapshot.forEach((doc) => {
           data[doc.id] = doc.data();
         });
-        console.log("Data received from Firestore:", data); // Log the data received
         setStrings(data);
       } catch (error) {
         console.error("Error fetching data from Firestore:", error);
