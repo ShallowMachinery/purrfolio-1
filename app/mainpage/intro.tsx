@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faFacebook, faXTwitter, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faFacebook, faXTwitter, faInstagram, faSpotify, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
@@ -15,10 +15,12 @@ interface LanguageStrings {
   shortAboutMe: string;
   email: string;
   linkedin: string;
+  github: string;
   facebook: string;
   xtwitter: string;
   instagram: string;
   spotify: string;
+  youtube: string;
   musixmatch: string;
 }
 
@@ -98,6 +100,19 @@ const IntroSection: React.FC<IntroSectionProps> = ({ language }) => {
               )}
             </div>
             <div className="relative">
+              <a href="https://github.com/ShallowMachinery" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-500 flex items-center"
+                 onMouseEnter={() => handleMouseEnter(strings[language]?.github)}
+                 onMouseLeave={handleMouseLeave}>
+                <FontAwesomeIcon icon={faGithub} className="mr-2" />
+              </a>
+              {tooltip === strings[language]?.github && (
+                <div className="bg-gray-800 text-white py-1 px-2 rounded absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-100 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center">
+                  <p className="text-xs">{strings[language]?.github}</p>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-1 rotate-45 bg-gray-800"></div>
+                </div>
+              )}
+            </div>
+            <div className="relative">
               <a href="https://www.facebook.com/eleazargalope0/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-500 flex items-center"
                  onMouseEnter={() => handleMouseEnter(strings[language]?.facebook)}
                  onMouseLeave={handleMouseLeave}>
@@ -145,6 +160,19 @@ const IntroSection: React.FC<IntroSectionProps> = ({ language }) => {
               {tooltip === strings[language]?.spotify && (
                 <div className="bg-gray-800 text-white py-1 px-2 rounded absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-100 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center">
                   <p className="text-xs">{strings[language]?.spotify}</p>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-1 rotate-45 bg-gray-800"></div>
+                </div>
+              )}
+            </div>
+            <div className="relative">
+              <a href="https://youtube.com/EleazarGalope" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-500 flex items-center"
+                 onMouseEnter={() => handleMouseEnter(strings[language]?.youtube)}
+                 onMouseLeave={handleMouseLeave}>
+                <FontAwesomeIcon icon={faYoutube} className="mr-2" />
+              </a>
+              {tooltip === strings[language]?.youtube && (
+                <div className="bg-gray-800 text-white py-1 px-2 rounded absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-100 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center">
+                  <p className="text-xs">{strings[language]?.youtube}</p>
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-1 rotate-45 bg-gray-800"></div>
                 </div>
               )}
