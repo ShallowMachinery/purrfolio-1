@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const ProjectsSection: React.FC = () => {
+interface ProjectsSectionProps {
+  language: string;
+}
+
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
   return (
     <section id="projects" className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 relative">
       <h2 className="text-5xl text-center font-bold mx-20">Projects</h2>
