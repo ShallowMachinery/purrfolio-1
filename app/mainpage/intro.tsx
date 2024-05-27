@@ -68,10 +68,12 @@ const IntroSection: React.FC<IntroSectionProps> = ({ language }) => {
       <div className="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start justify-between px-4 md:px-0">
         {/* First Column */}
         <div className="flex flex-col items-center text-center md:items-end md:text-right w-full md:w-1/2 my-auto">
-          <h1 id="fullName" className="text-3xl sm:text-5xl font-bold mx-5 md:mx-10 block">{strings[language]?.fullName}</h1>
+        <h1 id="fullName" className={`text-3xl sm:text-5xl font-bold mx-5 md:mx-10`}>
+          {strings[language]?.fullName}
+        </h1>
           {showLatinName && <h3 className='mt-3 font-semibold italic mx-5 md:mx-10'>({strings[language]?.latinName})</h3>}
-          <section id="shortAboutMe" className="text-lg sm:text-xl mt-10 mx-5 md:mx-10 italic">
-            <p>{strings[language]?.shortAboutMe}</p>
+          <section id="shortAboutMe" className="text-lg w-full sm:text-xl mx-5 md:mx-10 italic">
+            <p className='mt-10'>{strings[language]?.shortAboutMe}</p>
           </section>
           <div className="mt-10 flex flex-row space-x-2 mx-5 md:mx-10">
             <div className="relative">

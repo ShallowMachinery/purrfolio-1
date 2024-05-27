@@ -77,8 +77,8 @@ const ProficiencySection: React.FC<ProficiencySectionProps> = ({ language }) => 
   return (
     <section id="proficiency" className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-800 text-gray-100 relative py-10">
       <h2 className="text-3xl sm:text-4xl text-center font-bold mx-20">{strings[language]?.aboutmetitle}</h2>
-      <section id="longAboutMe" className="w-3/4 text-center text-base mt-10 mx-10 p-7 italic sm:text-lg">
-        <p>{strings[language]?.longAboutMe}</p>
+      <section id="longAboutMe" className="w-3/4 text-center text-base mx-10 italic sm:text-lg">
+        <p className="mt-10 p-7">{strings[language]?.longAboutMe}</p>
       </section>
 
       {/* Card container */}
