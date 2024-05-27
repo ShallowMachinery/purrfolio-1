@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faFacebook, faXTwitter, faInstagram, faSpotify, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { db } from '../firebase';
+import { db, storage } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
 interface IntroSectionProps {
@@ -22,6 +22,7 @@ interface LanguageStrings {
   spotify: string;
   youtube: string;
   musixmatch: string;
+  resume: string;
 }
 
 interface Strings {
@@ -189,6 +190,19 @@ const IntroSection: React.FC<IntroSectionProps> = ({ language }) => {
               {tooltip === strings[language]?.musixmatch && (
                 <div className="bg-gray-800 text-white py-1 px-2 rounded absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-100 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center">
                   <p className="text-xs text-center">{strings[language]?.musixmatch}</p>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-1 rotate-45 bg-gray-800"></div>
+                </div>
+              )}
+            </div>
+            <div className="relative">
+              <a href="https://firebasestorage.googleapis.com/v0/b/purrfolio-f6b4c.appspot.com/o/CV.pdf?alt=media&token=0c73fb44-1d49-44ee-9416-5e915acec741" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-500 flex items-center"
+                 onMouseEnter={() => handleMouseEnter(strings[language]?.resume)}
+                 onMouseLeave={handleMouseLeave}>
+                <FontAwesomeIcon icon={faFile} className="mr-2" />
+              </a>
+              {tooltip === strings[language]?.resume && (
+                <div className="bg-gray-800 text-white py-1 px-2 rounded absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-100 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center">
+                  <p className="text-xs text-center">{strings[language]?.resume}</p>
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-1 rotate-45 bg-gray-800"></div>
                 </div>
               )}

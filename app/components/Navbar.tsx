@@ -101,8 +101,8 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
         <a href="#projects" onClick={(e) => handleLinkClick(e, '#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.projects}</a>
         <a href="#hobbies" onClick={(e) => handleLinkClick(e, '#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.hobbies}</a>
         <a href="#inquiries" onClick={(e) => handleLinkClick(e, '#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.inquiries}</a>
-        <button onClick={toggleLanguage} className="text-gray-300 transition-colors duration-300 hover:text-blue-500">
-          <FontAwesomeIcon icon={faGlobe} className="mr-2" />
+        <button title={language === 'en' ? 'Viewing this site in English' : 'このサイトは日本語で表示されてるよ'} onClick={toggleLanguage} className="text-gray-300 transition-colors duration-300 hover:text-blue-500">
+          <FontAwesomeIcon icon={faGlobe} className="mr-2"/>
           {language === 'en' ? 'EN' : 'JP'}
         </button>
       </div>
