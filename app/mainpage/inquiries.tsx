@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
+import emailjs from "emailjs-com";
 
 interface LanguageStrings {
   [key: string]: {
@@ -49,18 +50,38 @@ const InquiriesSection: React.FC<InquiriesSectionProps> = ({ language }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
+      // Add message to Firestore
       const docRef = await addDoc(collection(db, "messages"), {
         name,
         email,
         message,
       });
-      setName("");
-      setEmail("");
-      setMessage("");
-      alert(strings[language]?.messagereceived);
+  
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: name,
+        to_name: "Eleazar Galope",
+        message,
+      };
+      const publicKey = "1xT0z9minPNQuR4Bt";
+      const serviceID = "service_jpq7omj";
+      const templateID = "template_be2mffm";
+  
+      const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+  
+      if (response.status === 200) {
+        setName("");
+        setEmail("");
+        setMessage("");
+        alert(strings[language]?.messagereceived);
+      } else {
+        alert(strings[language]?.messagenotsent);
+        console.error("Error sending message: ", response);
+      }
     } catch (error) {
-      alert(strings[language]?.messagenotsent)
-      console.error("Error sending message: ", error);
+      // Handle Firestore error
+      alert(strings[language]?.messagenotsent);
+      console.error("Error adding message to Firestore: ", error);
     }
   };
 
