@@ -95,7 +95,7 @@ const ProficiencySection: React.FC<ProficiencySectionProps> = ({ language }) => 
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-75 rounded-lg"></div>
               <div className="absolute bottom-0 left-0 p-4">
                 <h3 className="text-base sm:text-xl font-bold text-white">{cardData.title}</h3>
-                <p className="text-gray-100 sm:text-base text-xs" dangerouslySetInnerHTML={{ __html: cardData.description }} />
+                <p id="cardDesc" className="text-gray-100 sm:text-base text-xs" dangerouslySetInnerHTML={{ __html: cardData.description }} />
               </div>
             </div>
           </div>

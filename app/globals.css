@@ -98,10 +98,31 @@ body.dark-mode {
   color: #e1ebf7;
 }
 
-h1, h2, h3, p, label, input, button, a {
+h1, h2, h3, p, label, input, button, a, textarea {
   font-family: 'PlusJakartaSans', sans-serif;
+}
+
+#cardDesc a {
+  transition: color 0.3s ease;
+}
+
+#cardDesc a:hover {
+  color: rgb(94 234 212);
 }
 
 #credits a {
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#credits a:hover {
+  color: rgb(96 165 250);
+}
+
+#hobbiesdesc a {
+  transition: color 0.3s ease;
+}
+
+#hobbiesdesc a:hover {
+  color: rgb(163 230 53);
 }

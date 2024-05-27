@@ -80,6 +80,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
       <section id="projectsdesc" className="w-3/4 text-center text-base mt-10 mx-10 p-7 italic sm:text-lg">
         <p>{strings[language]?.projectssubtitle}</p>
       </section>
+    
 
       {/* Card container */}
       <div className="flex overflow-x-hidden w-full justify-center transition duration-300 ease-in-out transform translate-x-0">
@@ -95,7 +96,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-75 rounded-lg"></div>
               <div className="absolute bottom-0 left-0 p-4">
                 <h3 className="text-base sm:text-xl font-bold text-white">{cardData.title}</h3>
-                <p className="text-gray-100 sm:text-base text-xs" dangerouslySetInnerHTML={{ __html: cardData.description }} />
+                <p id="cardDesc" className="text-gray-100 sm:text-base text-xs" dangerouslySetInnerHTML={{ __html: cardData.description }} />
               </div>
             </div>
           </div>
