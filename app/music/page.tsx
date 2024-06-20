@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import '../../globals.css';
+import '../globals.css';
+import Navbar from '../components/Navbar_Music';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify, faItunesNote, faYoutube, faDeezer } from '@fortawesome/free-brands-svg-icons';
 
-const AlbumPage = () => {
+const MusicPage = () => {
 
   const releaseDate = new Date('2024-06-21T00:00:00');
   const [timeRemaining, setTimeRemaining] = useState('');
@@ -40,6 +41,7 @@ const AlbumPage = () => {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
+      <Navbar />
       <section className="text-center my-10">
         <h1 className="text-4xl font-bold">'18 to '21</h1>
         <p className="text-lg my-4 px-5"><b>Release date:</b> June 21, 2024</p>
@@ -136,4 +138,4 @@ const AlbumPage = () => {
   );
 };
 
-export default AlbumPage;
+export default MusicPage;

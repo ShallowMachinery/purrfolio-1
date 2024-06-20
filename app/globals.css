@@ -103,7 +103,7 @@ body.dark-mode {
   color: #e1ebf7;
 }
 
-h1, h2, h3, p, label, input, button, a, textarea, span {
+h1, h2, h3, p, label, input, button, a, textarea, span, li {
   font-family: 'PlusJakartaSans', sans-serif;
 }
 

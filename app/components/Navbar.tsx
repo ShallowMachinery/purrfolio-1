@@ -9,6 +9,7 @@ interface LanguageStrings {
     intro: string;
     aboutme: string;
     projects: string;
+    music: string;
     hobbies: string;
     inquiries: string;
     navbarmenu: string;
@@ -99,6 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
         <a href="#intro" onClick={(e) => handleLinkClick(e, '#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.intro}</a>
         <a href="#proficiency" onClick={(e) => handleLinkClick(e, '#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.aboutme}</a>
         <a href="#projects" onClick={(e) => handleLinkClick(e, '#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.projects}</a>
+        <a href="/music" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>{strings[language]?.music}</a>
         <a href="#hobbies" onClick={(e) => handleLinkClick(e, '#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.hobbies}</a>
         <a href="#inquiries" onClick={(e) => handleLinkClick(e, '#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.inquiries}</a>
         <button title={language === 'en' ? 'Viewing this site in English' : 'このサイトは日本語で表示されてるよ'} onClick={toggleLanguage} className="text-gray-300 transition-colors duration-300 hover:text-blue-500">
@@ -116,6 +118,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
             <a href="#intro" onClick={(e) => handleLinkClick(e, '#intro')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'intro' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.intro}</a>
             <a href="#proficiency" onClick={(e) => handleLinkClick(e, '#proficiency')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'proficiency' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.aboutme}</a>
             <a href="#projects" onClick={(e) => handleLinkClick(e, '#projects')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'projects' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.projects}</a>
+            <a href="/music" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>{strings[language]?.music}</a>
             <a href="#hobbies" onClick={(e) => handleLinkClick(e, '#hobbies')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'hobbies' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.hobbies}</a>
             <a href="#inquiries" onClick={(e) => handleLinkClick(e, '#inquiries')} className={`text-gray-300 transition-colors duration-300 ${activeSection === 'inquiries' ? 'font-bold' : ''} hover:text-blue-500`}>{strings[language]?.inquiries}</a>
             <button onClick={toggleLanguage} className="text-gray-300 transition-colors duration-300 hover:text-blue-500">
