@@ -93,12 +93,17 @@
   font-style: italic;
 }
 
+body {
+  background-color: #12141a;
+  color: #e1ebf7;
+}
+
 body.dark-mode {
   background-color: #12141a;
   color: #e1ebf7;
 }
 
-h1, h2, h3, p, label, input, button, a, textarea {
+h1, h2, h3, p, label, input, button, a, textarea, span {
   font-family: 'PlusJakartaSans', sans-serif;
 }
 
