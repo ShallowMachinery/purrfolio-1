@@ -41,7 +41,7 @@ const AlbumPage = () => {
     <main className="min-h-screen flex flex-col items-center justify-center">
       <section className="text-center my-10">
         <h1 className="text-4xl font-bold">'18 to '21</h1>
-        <p className="text-lg mt-4 px-5"><b>Release date:</b> June 21, 2024</p>
+        <p className="text-lg my-4 px-5"><b>Release date:</b> June 21, 2024</p>
           {timeRemaining && (
             <span><b>Time remaining:</b> {timeRemaining}</span>
           )}
@@ -49,15 +49,40 @@ const AlbumPage = () => {
       </section>
       <section className="flex flex-col md:flex-row items-center">
         <img src="/album.jpg" alt="Album Cover" className="w-80 h-80 object-cover rounded-lg shadow-lg mb-10 md:mb-0 md:mr-10" />
-        <section className="my-10 md:hidden">
-          <h2 className="text-3xl font-semibold">Listen Now</h2>
-          <div className="mt-4 flex space-x-4">
-            <a href="https://link-to-spotify" className="px-4 py-2 bg-green-600 text-white rounded">Spotify</a>
-            <a href="https://link-to-apple-music" className="px-4 py-2 bg-black text-white rounded">Apple Music</a>
-            <a href="https://link-to-youtube" className="px-4 py-2 bg-red-600 text-white rounded">YouTube</a>
+        <section className="mb-10 w-full max-w-lg md:hidden">
+        <h2 className="text-3xl font-semibold text-center mb-6">Listen</h2>
+        <div className="space-y-4 mx-5">
+          <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
+            <div className="flex items-center">
+              <FontAwesomeIcon icon={faSpotify} className="text-2xl mr-4" />
+              <span className="text-white">Spotify</span>
+            </div>
+            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
-        </section>
-        <div className="md:text-left text-center">
+          <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
+            <div className="flex items-center">
+              <FontAwesomeIcon icon={faYoutube} className="text-2xl mr-4" />
+              <span className="text-white">YouTube</span>
+            </div>
+            <a href="https://www.youtube.com/playlist?list=PLbwIjgqtDK_4HUBXHehvG53I_neXSNdN1" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Watch</a>
+          </div>
+          <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
+            <div className="flex items-center">
+              <FontAwesomeIcon icon={faItunesNote} className="text-2xl mr-4" />
+              <span className="text-white">Apple Music</span>
+            </div>
+            <a href="https://music.apple.com/ph/album/18-to-21/1750852721" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+          </div>
+          <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
+            <div className="flex items-center">
+              <FontAwesomeIcon icon={faDeezer} className="text-2xl mr-4" />
+              <span className="text-white">Deezer</span>
+            </div>
+            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+          </div>
+        </div>
+      </section>
+        <div className="md:text-left text-center mb-5">
           <h2 className="text-3xl font-semibold">Track list:</h2>
           <ul className="mt-4 text-lg">
             <li>1. Maniwala <small>(2018)</small></li>
@@ -73,15 +98,15 @@ const AlbumPage = () => {
           </ul>
         </div>
       </section>
-      <section className="my-10 w-full max-w-lg">
-        <h2 className="text-3xl font-semibold text-center mb-6">Listen Now</h2>
-        <div className="space-y-4">
+      <section className="my-10 w-full max-w-lg hidden md:block">
+        <h2 className="text-3xl font-semibold text-center mb-6">Listen</h2>
+        <div className="space-y-4 mx-5">
           <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
             <div className="flex items-center">
               <FontAwesomeIcon icon={faSpotify} className="text-2xl mr-4" />
               <span className="text-white">Spotify</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded cursor-not-allowed">Play</a>
+            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
           <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
             <div className="flex items-center">
@@ -102,7 +127,7 @@ const AlbumPage = () => {
               <FontAwesomeIcon icon={faDeezer} className="text-2xl mr-4" />
               <span className="text-white">Deezer</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded cursor-not-allowed">Play</a>
+            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
         </div>
       </section>
