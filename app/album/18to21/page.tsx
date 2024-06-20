@@ -57,7 +57,7 @@ const AlbumPage = () => {
               <FontAwesomeIcon icon={faSpotify} className="text-2xl mr-4" />
               <span className="text-white">Spotify</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+            <a href="https://open.spotify.com/album/7eX3gRrK6eTWKLTb7sxwPL" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
           <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
             <div className="flex items-center">
@@ -106,7 +106,7 @@ const AlbumPage = () => {
               <FontAwesomeIcon icon={faSpotify} className="text-2xl mr-4" />
               <span className="text-white">Spotify</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+            <a href="https://open.spotify.com/album/7eX3gRrK6eTWKLTb7sxwPL" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
           <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
             <div className="flex items-center">
