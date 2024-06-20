@@ -78,7 +78,7 @@ const AlbumPage = () => {
               <FontAwesomeIcon icon={faDeezer} className="text-2xl mr-4" />
               <span className="text-white">Deezer</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+            <a href="https://www.deezer.com/en/album/597646342" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
         </div>
       </section>
@@ -127,7 +127,7 @@ const AlbumPage = () => {
               <FontAwesomeIcon icon={faDeezer} className="text-2xl mr-4" />
               <span className="text-white">Deezer</span>
             </div>
-            <a className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
+            <a href="https://www.deezer.com/en/album/597646342" className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Play</a>
           </div>
         </div>
       </section>
