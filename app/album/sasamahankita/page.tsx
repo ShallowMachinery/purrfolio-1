@@ -9,7 +9,7 @@ import { faSpotify, faItunesNote, faYoutube, faDeezer } from '@fortawesome/free-
 import { db } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
-const releaseId: string = '18to21';
+const releaseId: string = 'sasamahankita';
 
 interface SmartLinks {
   spotify: string;
@@ -44,7 +44,7 @@ const AlbumPage = () => {
     fetchLinks();
   }, []);
 
-  const releaseDate = new Date('2024-06-21T00:00:00');
+  const releaseDate = new Date('2024-02-23T00:00:00');
   const [timeRemaining, setTimeRemaining] = useState('');
 
   useEffect(() => {
@@ -79,15 +79,14 @@ const AlbumPage = () => {
     <main className="min-h-screen flex flex-col items-center justify-center">
       <Navbar />
       <section className="text-center my-10">
-        <h1 className="text-4xl font-bold">'18 to '21</h1>
-        <p className="text-lg mt-4 px-5"><b>Release date:</b> June 21, 2024</p>
+        <h1 className="text-4xl font-bold">Sasamahan Kita</h1>
+        <p className="text-lg mt-4 px-5"><b>Release date:</b> February 23, 2024</p>
         {timeRemaining && (
           <span><b>Time remaining:</b> {timeRemaining}</span>
         )}
-        <p className="text-lg mt-4 px-5">Compilation of my songs from 2018-2021 that I cherish the most.</p>
       </section>
       <section className="flex flex-col md:flex-row items-center justify-center">
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/37/d9/e2/37d9e26b-74e0-e2bf-16be-a8f951061bc9/5063535996090_cover.jpg/1000x1000.jpg" alt="'18 to '21 album cover" className="w-80 h-80 object-cover rounded-lg shadow-lg mb-10 md:mb-0 md:mr-10" />
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/f0/31/edf0314e-0896-4a84-558b-0015c19b28cc/198009754441.png/1000x1000.png" alt="Sasamahan Kita album cover" className="w-80 h-80 object-cover rounded-lg shadow-lg mb-10 md:mb-0 md:mr-10" />
         <section className="mb-10 w-full max-w-lg md:hidden">
           <h2 className="text-3xl font-semibold text-center mb-6">Listen</h2>
           <div className="space-y-4 mx-5">
@@ -124,17 +123,10 @@ const AlbumPage = () => {
         <div className="md:text-left text-center mb-5">
           <h2 className="text-3xl font-semibold">Track list:</h2>
           <ul className="mt-4 text-lg">
-            <li>1. Maniwala <small>(2018)</small></li>
-            <li>2. Langit <small>(2019)</small></li>
-            <li>3. Mapanghusga <small>(2019)</small></li>
-            <li>4. Salubong <small>(2019)</small></li>
-            <li>5. Umaga <small>(2020)</small></li>
-            <li>6. Niyebe <small>(2020)</small></li>
-            <li>7. Habang-buhay <small>(2020)</small></li>
-            <li>8. Telepono (with Lexter Ramirez) <small>(2021)</small></li>
-            <li>9. Alalaumbaga <small>(2021)</small></li>
-            <li>10. Uniberso <small>(2021)</small></li>
+            <li>1. Sasamahan Kita</li>
+            <li>2. Sasamahan Kita <small>(Extended Version)</small>*</li>
           </ul>
+          <p className="text-[8px]">* only available in Spotify, YouTube Music, and Apple Music</p>
         </div>
       </section>
       <section className="my-10 w-full max-w-lg hidden md:block">
@@ -150,7 +142,7 @@ const AlbumPage = () => {
           <div className="flex justify-between items-center p-4 bg-[#29324e] shadow-lg rounded-lg">
             <div className="flex items-center">
               <FontAwesomeIcon icon={faYoutube} className="text-2xl mr-4" />
-              <span className="text-white">YouTube (Lyric Videos)</span>
+              <span className="text-white">YouTube (Lyric Video)</span>
             </div>
             <a href={links.youtube} className="px-4 py-2 bg-gray-200 text-gray-800 rounded">Watch</a>
           </div>

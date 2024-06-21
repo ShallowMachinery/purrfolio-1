@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-4 transition-opacity duration-300">
             <button className="absolute top-8 left-8 text-gray-300 mt-0 ml-0" onClick={closeNavbar}>✖</button>
             <a href="/" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>Home</a>
-            <a href="/music" className={`text-gray-300 transition-colors duration-300 font-bold hover:text-blue-500`}>My Music</a>
+            <a href="/music" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>My Music</a>
           </div>
         </div>
       )}
