@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className="hidden sm:flex items-center space-x-6">
         <a href="/" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>Home</a>
-        <a href="/music" className={`text-gray-300 transition-colors duration-300 font-bold hover:text-blue-500`}>My Music</a>
+        <a href="/music" className={`text-gray-300 transition-colors duration-300 hover:text-blue-500`}>My Music</a>
       </div>
       <div className="flex sm:hidden">
         <button className="text-gray-300" onClick={toggleNavbar}>{isNavbarOpen ? '' : 'Menu'}</button>
